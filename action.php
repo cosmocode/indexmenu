@@ -526,7 +526,7 @@ class action_plugin_indexmenu extends ActionPlugin
         } else {
             $nodes = $idxm->builddTreeNodes($data, '', false);
             $out = "ajxnodes = [";
-            $out .= rtrim($nodes[0], ",");
+            $out .= $nodes ? rtrim($nodes[0], ",") : '';
             $out .= "];";
         }
         return $out;
